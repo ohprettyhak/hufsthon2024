@@ -6,9 +6,12 @@ import {
   ScrollRestoration,
 } from 'react-router-dom';
 
-import { PATH } from '@/constants/routes.ts';
-import LandingPage from '@/pages/Landing';
-import { QueryClientProvider } from '@/QueryClientProvider.tsx';
+import { PATH } from '@/constants/routes';
+import DashboardPage from '@/pages/dashboard';
+import MapPage from '@/pages/map';
+import QRCodePage from '@/pages/qrcode';
+import { QueryClientProvider } from '@/QueryClientProvider';
+import RoutePage from '@/pages/route';
 
 const publicRoutes = [
   {
@@ -19,14 +22,11 @@ const publicRoutes = [
       </>
     ),
     children: [
-      {
-        path: PATH.INDEX,
-        element: <LandingPage />,
-      },
-      {
-        path: '*',
-        element: <Navigate to={PATH.INDEX} replace />,
-      },
+      { path: PATH.INDEX, element: <DashboardPage /> },
+      { path: PATH.QRCODE, element: <QRCodePage /> },
+      { path: PATH.MAP, element: <MapPage /> },
+      { path: PATH.ROUTE, element: <RoutePage /> },
+      { path: '*', element: <Navigate to={PATH.INDEX} replace /> },
     ],
   },
 ];
