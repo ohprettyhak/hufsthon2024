@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout';
+import { rem } from '@/utils/pxto.ts';
 
 import * as styles from './styles.css';
-import { rem } from '@/utils/pxto.ts';
 
 const QRCodePage = () => {
   return (
