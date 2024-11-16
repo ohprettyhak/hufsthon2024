@@ -1,4 +1,5 @@
-import '@/styles/reset.css.ts';
+import '@/styles/reset.css';
+import '@/styles/animation.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ApartmentIcon from '@/assets/icons/ApartmentIcon.tsx';
 import CalendarClockIcon from '@/assets/icons/CalendarClockIcon.tsx';
 import ChevronForwardIcon from '@/assets/icons/ChevronForwardIcon.tsx';
@@ -11,6 +12,9 @@ import { rem } from '@/utils/pxto.ts';
 import * as styles from './styles.css.ts';
 
 const DashboardPage = () => {
+  const query = new URLSearchParams(window.location.search);
+  const ticket = query.get('ticket');
+
   return (
     <Layout>
       <section
@@ -25,10 +29,10 @@ const DashboardPage = () => {
           오늘도 즐거운 하루 되세요!
         </p>
 
-        <div className={styles.search}>
+        <Link to={'/route'} className={styles.search}>
           <SearchIcon />
           <p className={styles.accentText}>어디로 이동하시겠어요?</p>
-        </div>
+        </Link>
       </section>
 
       <section
@@ -79,7 +83,7 @@ const DashboardPage = () => {
             갱신 및 변경 <ChevronForwardIcon color="rgba(0, 0, 0, 0.7)" size="16px" />
           </p>
         </div>
-        <MovePass />
+        {ticket && <MovePass />}
       </section>
     </Layout>
   );
