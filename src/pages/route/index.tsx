@@ -1,45 +1,48 @@
 import { Link } from 'react-router-dom';
 
-import SearchIcon from '@/assets/icons/SearchIcon.tsx';
 import Layout from '@/components/Layout';
+import Search from '@/components/Search';
 import { rem } from '@/utils/pxto.ts';
 
 import * as styles from './styles.css.ts';
+import FilterAltIcon from '@/assets/icons/FilterAltIcon.tsx';
 
 const RoutePage = () => {
   return (
     <Layout bg="#FFFFFF" menu={false}>
       <img className={styles.map} src="/static/image_map.png" alt="map" />
 
-      <div className={styles.inputRoot}>
-        <div className={styles.inputContainer}>
-          <div className={styles.search}>
-            <SearchIcon />
-            <p className={styles.accentText}>어디로 이동하시겠어요?</p>
-          </div>
+      <div className={styles.fixed} style={{ top: rem(48), bottom: 'auto' }}>
+        <div className={styles.searchContainer}>
+          <Search />
         </div>
       </div>
 
-      <div className={styles.root}>
+      <div className={styles.fixed} style={{ top: 'auto' }}>
         <div className={styles.sheet}>
-          <div className={styles.sectionBetween}>
-            <p className={styles.sectionTitle}>경로 및 노선 선택</p>
-            <p className={styles.sectionSubtitle}>소요시간 짧은 순</p>
+          <div className={styles.sheetHeader}>
+            <p className={styles.sheetHeaderTitle}>경로 및 노선 선택</p>
+            <p className={styles.sheetHeaderSubTitle}>
+              소요시간 짧은 순
+              <FilterAltIcon size="12px" />
+            </p>
           </div>
 
           <Link to={'/?ticket=1'}>
             <img
               className={styles.route}
               style={{ marginTop: rem(24) }}
-              src="/static/image_route1.png"
+              src="/static/image_route1.svg"
               alt="Route1"
+              draggable={false}
             />
           </Link>
           <img
             className={styles.route}
             style={{ marginTop: rem(16) }}
-            src="/static/image_route2.png"
+            src="/static/image_route2.svg"
             alt="Route2"
+            draggable={false}
           />
         </div>
       </div>

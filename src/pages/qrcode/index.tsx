@@ -8,12 +8,13 @@ const QRCodePage = () => {
     <Layout bg="white">
       <div className={styles.root}>
         <img
-          className={styles.image}
           style={{ marginTop: rem(48) }}
-          src="/static/image_route.png"
+          src="/static/image_route.svg"
+          width="100%"
           alt="Route"
+          draggable={false}
         />
-        <img className={styles.image} src="/static/image_qr.png" alt="QRCode" />
+        <img src="/static/image_qr.svg" width="100%" alt="QRCode" draggable={false} />
       </div>
     </Layout>
   );

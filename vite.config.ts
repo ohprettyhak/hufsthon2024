@@ -11,11 +11,11 @@ export default defineConfig({
     vanillaExtractPlugin(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
+      includeAssets: ['favicon.ico', 'apple-touch-logo.png', 'mask-icon.svg'],
       manifest: {
         name: 'Move',
-        short_name: 'Move를 통해 하루를 시작해요',
-        theme_color: '#ffffff',
+        short_name: 'Move',
+        theme_color: '#E7EBFF',
         icons: [
           {
             src: 'pwa-64x64.png',

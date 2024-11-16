@@ -3,7 +3,7 @@ import { createGlobalTheme } from '@vanilla-extract/css';
 import { rem } from '@/utils/pxto';
 
 const sizes = {
-  appWidth: rem(480),
+  appWidth: rem(420),
   appInlinePadding: rem(24),
 };
 

@@ -5,13 +5,14 @@ import {
   RouterProvider,
   ScrollRestoration,
 } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 import { PATH } from '@/constants/routes';
 import DashboardPage from '@/pages/dashboard';
 import MapPage from '@/pages/map';
 import QRCodePage from '@/pages/qrcode';
-import { QueryClientProvider } from '@/QueryClientProvider';
 import RoutePage from '@/pages/route';
+import { QueryClientProvider } from '@/QueryClientProvider';
 
 const publicRoutes = [
   {
@@ -36,7 +37,9 @@ const router = createBrowserRouter([...publicRoutes]);
 const App = () => {
   return (
     <QueryClientProvider>
-      <RouterProvider router={router} />
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
     </QueryClientProvider>
   );
 };

@@ -8,9 +8,3 @@ export const root = style({
   paddingInline: theme.sizes.appInlinePadding,
   gap: rem(24),
 });
-
-export const image = style({
-  width: '100%',
-  height: 'auto',
-  userSelect: 'none',
-});
