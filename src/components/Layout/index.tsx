@@ -18,7 +18,12 @@ const Layout = ({
 }: LayoutProps) => {
   return (
     <div className={styles.root}>
-      <main className={clsx(styles.main, styles.mainBottomPadding)} style={{ background: bg }}>
+      <main
+        className={clsx(styles.main, styles.mainBottomPadding)}
+        style={{ background: bg }}
+        data-animate={true}
+        data-animate-speed="slow"
+      >
         {children}
         {menu && <Menu />}
       </main>

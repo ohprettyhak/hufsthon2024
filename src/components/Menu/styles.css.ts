@@ -8,7 +8,7 @@ export const root = style({
   position: 'fixed',
   left: '50%',
   bottom: rem(48),
-  transform: 'translateX(-50%)',
+  transform: 'translateX(-50%) !important',
   padding: rem(4),
   borderRadius: rem(68),
   backgroundColor: theme.colors.border,
