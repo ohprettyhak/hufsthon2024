@@ -11,39 +11,33 @@ export default defineConfig({
     vanillaExtractPlugin(),
     VitePWA({
       registerType: 'autoUpdate',
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
         name: 'Move',
-        short_name: 'Move',
-        description: 'Move로 이동하는 당신의 생활',
+        short_name: 'Move를 통해 하루를 시작해요',
         theme_color: '#ffffff',
-        background_color: '#ffffff',
-        start_url: '/',
-        display: 'standalone',
         icons: [
           {
-            src: '/static/favicon/android-icon-192x192.png',
+            src: 'pwa-64x64.png',
+            sizes: '64x64',
+            type: 'image/png',
+          },
+          {
+            src: 'pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/static/favicon/icon-512x512.png',
+            src: 'pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
+            purpose: 'any',
           },
-        ],
-      },
-      workbox: {
-        runtimeCaching: [
           {
-            urlPattern: /^https:\/\/move-livid\.vercel\.app\/.*$/,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'app-cache',
-              expiration: {
-                maxEntries: 50,
-                maxAgeSeconds: 60 * 60 * 24,
-              },
-            },
+            src: 'maskable-icon-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
           },
         ],
       },
