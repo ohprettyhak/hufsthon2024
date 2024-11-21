@@ -32,3 +32,10 @@ Team Unicon의 프로젝트 **Move**는 경기도의 통근 문제를 해결하�
 - 스마트 기술 도입을 통한 운영 효율성 향상.
 - 환경 및 교통 정책 지원으로 사업 확장 가능.
 - 재택근무 혼합 시대에 적합한 유연한 서비스 제공.
+
+
+  
+### Contributors 👩‍💻👨‍💻
+
+<a href="https://github.com/chaenni0312"><img src="https://img.shields.io/badge/chaenni0312-black?style=social-square&logo=github&logoColor=white"/></a>
+<a href="https://github.com/sepowered"><img src="https://img.shields.io/badge/sepowered-black?style=social-square&logo=github&logoColor=white"/></a>
