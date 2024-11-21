@@ -39,3 +39,5 @@ Team Unicon의 프로젝트 **Move**는 경기도의 통근 문제를 해결하�
 
 <a href="https://github.com/chaenni0312"><img src="https://img.shields.io/badge/chaenni0312-black?style=social-square&logo=github&logoColor=white"/></a>
 <a href="https://github.com/sepowered"><img src="https://img.shields.io/badge/sepowered-black?style=social-square&logo=github&logoColor=white"/></a>
+<a href="https://github.com/kungbi"><img src="https://img.shields.io/badge/kungbi-black?style=social-square&logo=github&logoColor=white"/></a>
+<a href="https://github.com/ohprettyhak"><img src="https://img.shields.io/badge/ohprettyhak-black?style=social-square&logo=github&logoColor=white"/></a>
